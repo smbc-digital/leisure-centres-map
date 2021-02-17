@@ -1,17 +1,17 @@
-const librariesPopup = (feature, layer) => {
+const leisurecentresPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-book" aria-hidden="true"></i><p class="title">Library</p>
+  const content = `<div class="item"><i class="fa fa-heart" aria-hidden="true"></i><p class="title">Leisure Centres</p>
   <p></p>
-  <p class="info"><a href="${feature.properties.url}" target="_blank">${feature.properties.facility_name}</a></p>
-  <p class="info">Address: ${feature.properties.postal_address}</p>
-  <p class="info"><a href="${feature.properties.opening__times}" target="_blank">Opening Times</a></p>
+  <p class="info"><a href="${feature.properties.url}" target="_blank">${feature.properties.centre_name}</a></p>
+  <p class="info">Address: ${feature.properties.address}</p>
+  <p class="info">Tel: ${feature.properties.telephone}</p>
   <p></p>
-  <p class="title"><a href="mailto:${feature.properties.email}" target="_blank">Email Library</a></p>
+  <p class="title"><a href="mailto:${feature.properties.email}" target="_blank">Email Leisure Centre</a></p>
   </div>`
 
   layer.bindPopup(content)
 }
 
 export {
-  librariesPopup
+  leisurecentresPopup
 }

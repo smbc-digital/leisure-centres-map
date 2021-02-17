@@ -1,12 +1,12 @@
-const librariesStyle = {
+const leisurecentresStyle = {
     radius: 6,
-    color: '#08519c',
+    color: '#d94801',
     weight: 2,
     opacity: 1,
-    fillColor: '#2171b5',
+    fillColor: '#f16913',
     fillOpacity: 0.5
 }
 
 export {
-    librariesStyle
+    leisurecentresStyle
 }

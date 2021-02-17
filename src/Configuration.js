@@ -1,6 +1,6 @@
 import Leaflet from 'leaflet'
-import { librariesPopup} from './Popups'
-import { librariesStyle} from './Styles'
+import { leisurecentresPopup} from './Popups'
+import { leisurecentresStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -17,12 +17,12 @@ const Configuration = {
     [
 
         {
-            key: 'Libraries',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=buildings_and_land:library&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            key: 'Leisure Centres',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=buildings_and_land:leisure_centres&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-                onEachFeature: librariesPopup,
+                onEachFeature: leisurecentresPopup,
                 maxZoom: 2,
-                style: librariesStyle,
+                style: leisurecentresStyle,
                 pointToLayer: (feature, latlng) => {
                     return Leaflet.circleMarker(latlng)
                 },
